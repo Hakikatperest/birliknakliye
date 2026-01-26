@@ -14,8 +14,8 @@
         :root {
             --primary: #1a56db;
             --primary-dark: #1e429f;
-            --secondary: #f59e0b;
-            --accent: #10b981;
+            --secondary: #10b981;
+            --accent: #f59e0b;
             --dark: #1f2937;
             --gray-dark: #4b5563;
             --gray: #9ca3af;
@@ -295,7 +295,7 @@
 
         /* HERO SECTION */
         .nakliye-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556740738-6ebd3d6b2b8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/birlik-nakliye.webp');
             background-size: cover;
             background-position: center;
             color: var(--white);
@@ -364,9 +364,7 @@
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, var(--secondary), #0d9c6f);
             color: var(--white);
         }
 
@@ -527,6 +525,88 @@
             font-size: 1.2rem;
             margin-bottom: 12px;
             color: var(--dark);
+        }
+
+        .city-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .city-card {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .city-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        .city-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .city-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--dark);
+        }
+
+        .city-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        .section-cta {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .section-btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .section-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .section-btn.phone {
+            background: var(--primary);
+            color: white;
+        }
+
+        .section-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         /* SAĞ SÜTUN - SIDEBAR */
@@ -836,22 +916,23 @@
 
         @keyframes pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(26, 86, 219, 0.7);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
             70% {
-                box-shadow: 0 0 0 15px rgba(26, 86, 219, 0);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
             }
             100% {
-                box-shadow: 0 0 0 0 rgba(26, 86, 219, 0);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
 
         /* FOOTER */
         footer {
-            background: var(--dark);
-            color: white;
+            background: var(--white);
+            color: var(--dark);
             padding: 60px 20px 30px;
             text-align: center;
+            border-top: 1px solid var(--gray-light);
         }
 
         .footer-content {
@@ -866,7 +947,7 @@
         .footer-logo {
             font-size: 1.8rem;
             font-weight: 800;
-            color: white;
+            color: var(--primary);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -884,11 +965,11 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--gray-dark);
         }
 
         .contact-item i {
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         .footer-links {
@@ -900,22 +981,23 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--gray-dark);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--accent);
+            color: var(--primary);
         }
 
         .copyright {
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
+            border-top: 1px solid var(--gray-light);
+            color: #dc2626;
             font-size: 0.9rem;
             width: 100%;
+            font-weight: 600;
         }
 
         /* RESPONSIVE */
@@ -970,6 +1052,15 @@
                 right: 10px;
                 bottom: 10px;
             }
+            
+            .section-cta {
+                flex-direction: column;
+            }
+            
+            .city-cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -978,6 +1069,10 @@
             }
             
             .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .city-cards {
                 grid-template-columns: 1fr;
             }
         }
@@ -1023,13 +1118,13 @@
             <a href="#nakliye-firmalari">
                 <i class="fas fa-building"></i> Nakliye Firmaları
             </a>
-            <a href="#iletisim">
+            <a href="#nakliyatci-numarasi">
                 <i class="fas fa-phone-alt"></i> Nakliyatçı Numarası
             </a>
         </div>
 
         <div class="sidebar-cta">
-            <a href="https://wa.me/905369985940" target="_blank" class="sidebar-btn whatsapp">
+            <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20işim%20var.%20Fiyat%20teklifi%20almak%20istiyorum." target="_blank" class="sidebar-btn whatsapp">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
             <a href="tel:05369985940" class="sidebar-btn phone">
@@ -1045,10 +1140,10 @@
     <section class="nakliye-hero">
         <div class="nakliye-hero-content">
             <h1>Birlik Nakliye: <span>Güvenli ve Ekonomik</span> Nakliye Çözümleri</h1>
-            <p>Türkiye'nin her yerine şehirler arası nakliyat, evden eve taşımacılık ve profesyonel nakliye hizmetleri. En uygun fiyatlarla güvenilir taşımacılık.</p>
+            <p>Türkiye'nin her yerine şehirler arası nakliyat, evden eve taşımacılık ve profesyonel nakliye hizmetleri. 20 yıllık tecrübemizle en uygun fiyatlarla güvenilir taşımacılık.</p>
             <div class="hero-cta-buttons">
                 <a href="tel:05369985940" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hemen Arayın: 0536 998 59 40</a>
-                <a href="#nakliyat-fiyatlari" class="btn btn-secondary"><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Al</a>
+                <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20işim%20var.%20Fiyat%20teklifi%20almak%20istiyorum." class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp'tan Fiyat Teklifi Al</a>
             </div>
         </div>
     </section>
@@ -1064,7 +1159,7 @@
                 <!-- ŞEHİRLER ARASI NAKLİYAT -->
                 <section class="content-section" id="sehirler-arasi">
                     <h2>Şehirler Arası Nakliyat</h2>
-                    <p><strong>Şehirler arası nakliyat</strong> hizmetimizle eşyalarınızı güvenle taşıyoruz. İstanbul'dan Ankara'ya, İzmir'den Antalya'ya, Türkiye'nin her noktasına profesyonel taşımacılık hizmeti sunuyoruz.</p>
+                    <p><strong>Şehirler arası nakliyat</strong>, farklı şehirler arasında eşya taşıma işlemini ifade eder. Birlik Nakliye olarak, Türkiye'nin tüm illeri arasında profesyonel nakliye hizmeti sunuyoruz. İstanbul'dan Ankara'ya, İzmir'den Antalya'ya, Bursa'dan Adana'ya kadar her güzergahta hizmet veriyoruz.</p>
                     
                     <div class="highlight-box">
                         <h4><i class="fas fa-info-circle"></i> Şehirler Arası Nakliyat Avantajlarımız:</h4>
@@ -1073,94 +1168,173 @@
                             <li><strong>Profesyonel paketleme</strong> - Kırılacak eşyalar özel ambalajlarda</li>
                             <li><strong>Zamanında teslimat</strong> - Anlaştığımız gün ve saatte teslimat</li>
                             <li><strong>Ekonomik fiyatlar</strong> - En uygun nakliyat fiyatları</li>
+                            <li><strong>GPS Takip</strong> - Eşyalarınızı anlık takip edebilme imkanı</li>
                         </ul>
                     </div>
                     
-                    <h3>Hizmet Verdiğimiz Başlıca Güzergahlar</h3>
-                    <div class="feature-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-map-signs"></i>
-                            </div>
-                            <h4>İstanbul ↔ Ankara</h4>
-                            <p>İstanbul ve Ankara arası günlük seferler. Eşyalarınız 1 günde teslim.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-road"></i>
-                            </div>
-                            <h4>İzmir ↔ Antalya</h4>
-                            <p>Ege ve Akdeniz bölgeleri arası profesyonel taşımacılık.</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">
+                    <h3>Hızlı Müdahale Ekiplerimiz - 12 Büyük Şehir</h3>
+                    <div class="city-cards">
+                        <div class="city-card">
+                            <div class="city-icon">
                                 <i class="fas fa-city"></i>
                             </div>
-                            <h4>Bursa ↔ İzmir</h4>
-                            <p>Sanayi ve ticari eşya taşımacılığında uzman ekibimiz.</p>
+                            <h4>İstanbul</h4>
+                            <p>7/24 hizmet, 1 saat içinde adresinizde</p>
                         </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-landmark"></i>
+                            </div>
+                            <h4>Ankara</h4>
+                            <p>Tüm ilçelere hızlı ulaşım</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <h4>İzmir</h4>
+                            <p>Merkez ve çevre ilçelerde acil nakliye</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h4>Bursa</h4>
+                            <p>Sanayi bölgelerinde özel ekipler</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-umbrella-beach"></i>
+                            </div>
+                            <h4>Antalya</h4>
+                            <p>Turistik bölgelere özel çözümler</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4>Kocaeli</h4>
+                            <p>Sanayi nakliyesinde uzman</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-wheat-alt"></i>
+                            </div>
+                            <h4>Konya</h4>
+                            <p>Orta Anadolu'da güvenilir hizmet</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <h4>Adana</h4>
+                            <p>Çukurova bölgesinde lider</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-mosque"></i>
+                            </div>
+                            <h4>Kayseri</h4>
+                            <p>İç Anadolu'da profesyonel çözüm</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-mountain"></i>
+                            </div>
+                            <h4>Trabzon</h4>
+                            <p>Karadeniz'de güvenilir taşıma</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Eskişehir</h4>
+                            <p>Öğrenci nakliyesinde tecrübeli</p>
+                        </div>
+                        <div class="city-card">
+                            <div class="city-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h4>Gaziantep</h4>
+                            <p>Ticari nakliyede uzman ekip</p>
+                        </div>
+                    </div>
+                    
+                    <p>Şehirler arası nakliyat işlemlerinizde, eşyalarınızın güvenliği bizim için en öncelikli konudur. Özel nakliye araçlarımız, deneyimli personelimiz ve modern ekipmanlarımızla eşyalarınızı güvenle taşıyoruz.</p>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> Hemen Ara: 0536 998 59 40</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20şehirler%20arası%20nakliyat%20hizmeti%20almak%20istiyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Bilgi Al</a>
                     </div>
                 </section>
                 
                 <!-- NAKLİYAT FİYATLARI -->
                 <section class="content-section" id="nakliyat-fiyatlari">
-                    <h2>Nakliyat Fiyatları 2025</h2>
-                    <p><strong>Nakliyat fiyatları</strong> taşınacak eşya miktarına, mesafeye ve özel gereksinimlere göre değişiklik gösterir. Aşağıda ortalama fiyat aralıklarımızı bulabilirsiniz:</p>
+                    <h2>Nakliyat Fiyatları</h2>
+                    <p><strong>Nakliyat fiyatları</strong> birçok faktöre bağlı olarak değişiklik gösterebilir. Taşınacak eşya miktarı, mesafe, kat sayısı, özel eşya varlığı ve taşıma tarihi fiyatlandırmayı etkileyen başlıca unsurlardır. Birlik Nakliye olarak şeffaf fiyat politikası izliyor, hiçbir gizli masaf uygulamıyoruz.</p>
                     
-                    <div class="feature-grid">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <h4>1+1 Ev Eşyası</h4>
-                            <p><strong>İstanbul ↔ Ankara:</strong> 4.500 TL - 6.000 TL</p>
-                            <p><strong>İzmir ↔ Antalya:</strong> 3.800 TL - 5.200 TL</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <h4>2+1 Ev Eşyası</h4>
-                            <p><strong>İstanbul ↔ Ankara:</strong> 6.500 TL - 8.500 TL</p>
-                            <p><strong>İzmir ↔ Antalya:</strong> 5.500 TL - 7.200 TL</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-warehouse"></i>
-                            </div>
-                            <h4>3+1 Ev Eşyası</h4>
-                            <p><strong>İstanbul ↔ Ankara:</strong> 8.000 TL - 11.000 TL</p>
-                            <p><strong>İzmir ↔ Antalya:</strong> 7.000 TL - 9.500 TL</p>
-                        </div>
-                    </div>
+                    <h3>Nakliyat Fiyatını Etkileyen Faktörler</h3>
+                    <ul>
+                        <li><strong>Mesafe:</strong> Taşıma mesafesi ne kadar uzunsa maliyet o kadar artar</li>
+                        <li><strong>Eşya Miktarı:</strong> Taşınacak eşya hacmi ve ağırlığı</li>
+                        <li><strong>Özel Eşyalar:</strong> Piyano, sanat eseri, antika gibi özel eşyalar</li>
+                        <li><strong>Kat Sayısı:</strong> Asansör olup olmaması, kat yüksekliği</li>
+                        <li><strong>Park Sorunu:</strong> Aracın yükleme/boşaltma noktasına yaklaşımı</li>
+                        <li><strong>Paketleme İhtiyacı:</strong> Profesyonel paketleme gereksinimi</li>
+                    </ul>
                     
                     <div class="highlight-box">
                         <h4><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Alın!</h4>
                         <p>Tam ve net fiyat almak için bizi arayın: <strong>0536 998 59 40</strong>. Taşınacak eşya listesi, çıkış ve varış adreslerinizi belirterek anında fiyat teklifi alabilirsiniz. Nakliyat fiyatlarımızda herhangi bir gizli masraf yoktur.</p>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> Fiyat İçin Ara</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20nakliyat%20fiyatı%20almak%20istiyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Fiyat Al</a>
                     </div>
                 </section>
                 
                 <!-- EN YAKIN NAKLİYECİ -->
                 <section class="content-section" id="en-yakin-nakliyeci">
                     <h2>En Yakın Nakliyeci</h2>
-                    <p><strong>En yakın nakliyeci</strong> arayışında mısınız? Birlik Nakliye olarak Türkiye'nin 81 ilinde hizmet veriyoruz. Bulunduğunuz bölgeye en yakın şubemizden veya mobil ekibimizden hemen hizmet alabilirsiniz.</p>
+                    <p><strong>En yakın nakliyeci</strong> arayışında mısınız? Birlik Nakliye olarak Türkiye'nin 81 ilinde hizmet veriyoruz. Bulunduğunuz bölgeye en yakın şubemizden veya mobil ekibimizden hemen hizmet alabilirsiniz. Acil nakliye ihtiyaçlarınız için 7/24 hizmet veriyoruz.</p>
                     
-                    <h3>Hızlı Müdahale Ekiplerimiz</h3>
-                    <ul>
-                        <li><strong>İstanbul:</strong> Avrupa ve Anadolu yakasında 7/24 hizmet</li>
-                        <li><strong>Ankara:</strong> Tüm ilçelere hızlı ulaşım</li>
-                        <li><strong>İzmir:</strong> Merkez ve çevre ilçelerde acil nakliye</li>
-                        <li><strong>Bursa:</strong> Sanayi bölgelerinde özel ekipler</li>
-                        <li><strong>Antalya:</strong> Turistik bölgelere özel çözümler</li>
-                    </ul>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4>Hızlı Müdahale</h4>
+                            <p>Acil nakliye ihtiyaçlarınız için en yakın ekibimiz 1-2 saat içinde adresinizde.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h4>Geniş Hizmet Ağı</h4>
+                            <p>Türkiye'nin tüm illerinde şubelerimiz ve mobil ekiplerimiz bulunmaktadır.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>7/24 Destek</h4>
+                            <p>Haftanın 7 günü, 24 saat kesintisiz müşteri hizmetleri desteği.</p>
+                        </div>
+                    </div>
                     
                     <p>Acil nakliye ihtiyacınız varsa hemen <strong>0536 998 59 40</strong> numaralı telefondan bize ulaşın. En yakın ekibimiz 1-2 saat içinde adresinizde olacaktır.</p>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> En Yakın Nakliyeci Ara</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20en%20yakın%20nakliyeci%20arıyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> Konum Gönder</a>
+                    </div>
                 </section>
                 
                 <!-- EVDEN EVE NAKLİYAT -->
                 <section class="content-section" id="evden-eve-nakliyat">
                     <h2>Evden Eve Nakliyat</h2>
-                    <p><strong>Evden eve nakliyat</strong> işlemlerinizde Birlik Nakliye güvencesiyle hizmet veriyoruz. Eşyalarınızın paketlenmesinden, yüklenmesine, taşınmasından yeni evinizde yerleştirilmesine kadar tüm süreci profesyonelce yönetiyoruz.</p>
+                    <p><strong>Evden eve nakliyat</strong> işlemlerinizde Birlik Nakliye güvencesiyle hizmet veriyoruz. Eşyalarınızın paketlenmesinden, yüklenmesine, taşınmasından yeni evinizde yerleştirilmesine kadar tüm süreci profesyonelce yönetiyoruz. 20 yıllık tecrübemizle binlerce mutlu müşteriye hizmet verdik.</p>
                     
                     <div class="feature-grid">
                         <div class="feature-card">
@@ -1168,29 +1342,34 @@
                                 <i class="fas fa-box-open"></i>
                             </div>
                             <h4>Profesyonel Paketleme</h4>
-                            <p>Kırılacak eşyalarınız özel ambalaj malzemeleriyle paketlenir.</p>
+                            <p>Kırılacak eşyalarınız özel ambalaj malzemeleriyle paketlenir. Cam, porselen, elektronik eşyalar özenle hazırlanır.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-truck-loading"></i>
                             </div>
                             <h4>Güvenli Yükleme</h4>
-                            <p>Eşyalarınız hasar görmeyecek şekilde özenle yüklenir.</p>
+                            <p>Eşyalarınız hasar görmeyecek şekilde özenle yüklenir. Özel bağlama teknikleriyle sabitlenir.</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
                                 <i class="fas fa-people-carry"></i>
                             </div>
                             <h4>Yerleştirme Hizmeti</h4>
-                            <p>Yeni evinizde eşyalarınız istediğiniz yerlere yerleştirilir.</p>
+                            <p>Yeni evinizde eşyalarınız istediğiniz yerlere yerleştirilir. Montaj gerektiren eşyalar monte edilir.</p>
                         </div>
+                    </div>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> Ev Taşıma İçin Ara</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20evden%20eve%20nakliyat%20hizmeti%20almak%20istiyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> Ev Taşıma Bilgisi</a>
                     </div>
                 </section>
                 
                 <!-- NAKLİYE FİRMALARI -->
                 <section class="content-section" id="nakliye-firmalari">
                     <h2>Nakliye Firmaları İçin Referansımız</h2>
-                    <p>Birlik Nakliye olarak, <strong>nakliye firmaları</strong> arasında güvenilirliğimiz ve kalitemizle öne çıkıyoruz. 20 yılı aşkın tecrübemizle binlerce müşteriye hizmet verdik.</p>
+                    <p>Birlik Nakliye olarak, <strong>nakliye firmaları</strong> arasında güvenilirliğimiz ve kalitemizle öne çıkıyoruz. 20 yılı aşkın tecrübemizle binlerce müşteriye hizmet verdik. Kurumsal müşterilerimize özel çözümler sunuyor, iş ortaklıklarımızı önemsiyoruz.</p>
                     
                     <h3>Neden Bizi Tercih Etmelisiniz?</h3>
                     <ul>
@@ -1200,13 +1379,19 @@
                         <li><strong>Modern Araç Filosu:</strong> Son model nakliye araçlarımız</li>
                         <li><strong>Profesyonel Ekip:</strong> Eğitimli ve deneyimli personel</li>
                         <li><strong>7/24 Hizmet:</strong> Haftanın her günü, günün her saati hizmet</li>
+                        <li><strong>Kurumsal Çözümler:</strong> Firmalara özel paketler ve fiyatlandırma</li>
                     </ul>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> Kurumsal İletişim</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20kurumsal%20nakliye%20hizmeti%20almak%20istiyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> Kurumsal Teklif Al</a>
+                    </div>
                 </section>
                 
-                <!-- İLETİŞİM -->
-                <section class="content-section" id="iletisim">
+                <!-- NAKLİYATÇI NUMARASI -->
+                <section class="content-section" id="nakliyatci-numarasi">
                     <h2>Nakliyatçı Numarası ve İletişim</h2>
-                    <p><strong>Nakliyatçı numarası</strong> arayışınız Birlik Nakliye ile son bulsun. Türkiye geneli nakliye hizmetlerimiz için hemen bize ulaşın.</p>
+                    <p><strong>Nakliyatçı numarası</strong> arayışınız Birlik Nakliye ile son bulsun. Türkiye geneli nakliye hizmetlerimiz için hemen bize ulaşın. Müşteri temsilcilerimiz size en uygun çözümü sunmak için hazır bekliyor.</p>
                     
                     <div class="highlight-box">
                         <h4><i class="fas fa-phone-volume"></i> Hemen Arayın!</h4>
@@ -1214,10 +1399,15 @@
                         <p><strong>WhatsApp Hattı:</strong> 0536 998 59 40</p>
                         <p><strong>Çalışma Saatleri:</strong> Haftanın 7 günü, 08:00 - 24:00</p>
                         <p><strong>Acili Nakliye:</strong> 7/24 acil nakliye hattı</p>
+                        <p><strong>E-posta:</strong> info@birliknakliye.com</p>
                     </div>
                     
-                    <h3>Hizmet Bölgelerimiz</h3>
-                    <p>Türkiye'nin tüm illerine hizmet veriyoruz. Özellikle İstanbul, Ankara, İzmir, Bursa, Antalya, Adana, Konya, Mersin, Gaziantep, Kocaeli gibi büyük şehirlerde günlük seferlerimiz bulunmaktadır.</p>
+                    <p>İstanbul, Ankara, İzmir başta olmak üzere Türkiye'nin tüm illerine hizmet veriyoruz. Özellikle büyük şehirlerde günlük seferlerimiz bulunmaktadır. Hizmet bölgelerimiz hakkında detaylı bilgi almak için bizi arayabilirsiniz.</p>
+                    
+                    <div class="section-cta">
+                        <a href="tel:05369985940" class="section-btn phone"><i class="fas fa-phone-alt"></i> Hemen Ara</a>
+                        <a href="https://wa.me/905369985940?text=Merhaba,%20nakliyat%20hakkında%20bilgi%20almak%20istiyorum." class="section-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
+                    </div>
                 </section>
             </article>
             
@@ -1227,7 +1417,7 @@
                 <div class="sidebar-widget quick-contact">
                     <h3 class="widget-title"><i class="fas fa-headset"></i> Hızlı Nakliye Talebi</h3>
                     <p style="margin-bottom: 20px; opacity: 0.9;">Ücretsiz keşif ve fiyat teklifi için hemen arayın.</p>
-                    <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20fiyat%20teklifi%20almak%20istiyorum." class="contact-sidebar-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
+                    <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20işim%20var.%20Fiyat%20teklifi%20almak%20istiyorum." class="contact-sidebar-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
                     <a href="tel:05369985940" class="contact-sidebar-btn phone"><i class="fas fa-phone-alt"></i> 0536 998 59 40</a>
                     <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">7/24 Acil Nakliye Hattı</p>
                 </div>
@@ -1241,7 +1431,7 @@
                         <li><a href="#en-yakin-nakliyeci"><i class="fas fa-chevron-right"></i> en yakın nakliyeci</a></li>
                         <li><a href="#evden-eve-nakliyat"><i class="fas fa-chevron-right"></i> evden eve nakliyat</a></li>
                         <li><a href="#nakliye-firmalari"><i class="fas fa-chevron-right"></i> nakliye firmaları</a></li>
-                        <li><a href="#iletisim"><i class="fas fa-chevron-right"></i> nakliyatçı numarası</a></li>
+                        <li><a href="#nakliyatci-numarasi"><i class="fas fa-chevron-right"></i> nakliyatçı numarası</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> ucuz nakliyat</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> ofis taşıma</a></li>
                         <li><a href="#"><i class="fas fa-chevron-right"></i> parsiyel nakliye</a></li>
@@ -1251,7 +1441,7 @@
                 
                 <!-- SIK SORULAN SORULAR -->
                 <div class="sidebar-widget faq-sidebar">
-                    <h3 class="widget-title"><i class="fas fa-question-circle"></i> Nakliye Sık Sorulan Sorular</h3>
+                    <h3 class="widget-title"><i class="fas fa-question-circle"></i> Sık Sorulan Sorular</h3>
                     
                     <div class="faq-item">
                         <div class="faq-question">
@@ -1259,7 +1449,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Fiyat; taşınacak eşya miktarı, mesafe, kat sayısı, özel eşya varlığı ve taşıma tarihine göre belirlenir.</p>
+                            <p>Fiyat; taşınacak eşya miktarı, mesafe, kat sayısı, özel eşya varlığı, park sorunu ve taşıma tarihine göre belirlenir. Ücretsiz keşif ile en doğru fiyatı alabilirsiniz.</p>
                         </div>
                     </div>
                     
@@ -1269,7 +1459,7 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Evet, tüm eşyalarınız nakliye sigortamız kapsamındadır. Hasarlı eşya tazmin edilir.</p>
+                            <p>Evet, tüm eşyalarınız nakliye sigortamız kapsamındadır. Taşıma sırasında oluşabilecek hasarlar sigorta tarafından karşılanır.</p>
                         </div>
                     </div>
                     
@@ -1279,7 +1469,77 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="faq-answer">
-                            <p>Mesafeye göre değişir. Örneğin İstanbul-Ankara arası ortalama 1 gün sürer.</p>
+                            <p>Mesafeye göre değişir. Örneğin İstanbul-Ankara arası ortalama 1 gün sürer. Büyük şehirler arası taşımalar 1-2 gün içinde tamamlanır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Kırılacak eşyalar nasıl taşınır?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Kırılacak eşyalar özel ambalaj malzemeleri (köpük, strafor, bubble wrap) ile paketlenir, özel bölmelerde taşınır.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Hafta sonu ve tatillerde hizmet veriyor musunuz?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, haftanın 7 günü, resmi tatiller dahil 08:00-24:00 saatleri arasında hizmet veriyoruz. Acil nakliye için 7/24 hizmetimiz mevcuttur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Ödemeyi ne zaman yapmalıyım?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ödeme, eşyalarınız yeni adresinize teslim edilip yerleştirildikten sonra yapılır. Peşin veya kredi kartı ile ödeme seçeneklerimiz mevcuttur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Parsiyel nakliye nedir?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Parsiyel nakliye, tam yük dolmayacak miktardaki eşyaların başka yüklerle birlikte taşınmasıdır. Bu yöntemle nakliye maliyetleri düşer.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Eşyalarımı nasıl takip edebilirim?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>GPS sistemi ile eşyalarınızı anlık takip edebilirsiniz. Ayrıca müşteri temsilcimiz size düzenli bilgi verir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Taşıma öncesi neler yapmalıyım?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Değerli eşyalarınızı (mücevher, nakit, önemli belgeler) yanınıza alın. Eşyalarınızı kategorilere ayırın ve taşınmayacak eşyaları ayırın.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Montaj gerektiren eşyalar için hizmetiniz var mı?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, yatak, dolap, kitaplık gibi montaj gerektiren eşyalarınızı söküp yeni adresinizde kuruyoruz.</p>
                         </div>
                     </div>
                 </div>
@@ -1293,7 +1553,7 @@
         <p>Birlik Nakliye'nin tecrübeli ekibiyle eşyalarınız güvende. Ücretsiz keşif ve en uygun fiyat garantisi.</p>
         <div class="cta-buttons">
             <a href="tel:05369985940" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hemen Ara: 0536 998 59 40</a>
-            <a href="#nakliyat-fiyatlari" class="btn btn-secondary"><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Al</a>
+            <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20işim%20var.%20Fiyat%20teklifi%20almak%20istiyorum." class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp'tan Fiyat Teklifi Al</a>
         </div>
     </section>
 
@@ -1320,7 +1580,7 @@
 
     <!-- FLOATING CTA -->
     <div class="floating-cta">
-        <a href="https://wa.me/905369985940" class="floating-btn floating-whatsapp">
+        <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20işim%20var.%20Fiyat%20teklifi%20almak%20istiyorum." class="floating-btn floating-whatsapp">
             <i class="fab fa-whatsapp"></i>
         </a>
         <a href="tel:05369985940" class="floating-btn floating-phone">
@@ -1356,7 +1616,7 @@
                 <a href="#en-yakin-nakliyeci">En Yakın Nakliyeci</a>
                 <a href="#evden-eve-nakliyat">Evden Eve Nakliyat</a>
                 <a href="#nakliye-firmalari">Nakliye Firmaları</a>
-                <a href="#iletisim">İletişim</a>
+                <a href="#nakliyatci-numarasi">Nakliyatçı Numarası</a>
             </div>
             
             <div class="copyright">
