@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birlik Nakliye | Türkiye Geneli Evden Eve Nakliyat Hizmetleri</title>
+    <meta name="description" content="Birlik Nakliye ile güvenli, ekonomik ve profesyonel şehirler arası nakliyat hizmeti. Nakliyat fiyatları, en yakın nakliyeci, evden eve nakliyat çözümleri." />
+    <meta name="keywords" content="şehirler arası nakliyat, nakliyat fiyatları, en yakın nakliyeci, evden eve nakliyat, nakliye firmaları, nakliyatçı numarası, Birlik Nakliye" />
+    <meta name="robots" content="index, follow" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚚</text></svg>">
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e429f;
+            --secondary: #f59e0b;
+            --accent: #10b981;
+            --dark: #1f2937;
+            --gray-dark: #4b5563;
+            --gray: #9ca3af;
+            --gray-light: #f3f4f6;
+            --light: #f9fafb;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.12);
+            --radius: 16px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* HAMBURGER MENÜ CSS */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            height: 70px;
+        }
+
+        .logo a {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a56db;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo a i {
+            color: #000;
+            font-size: 1.8rem;
+        }
+
+        /* Hamburger Menü Butonu */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1001;
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* Yandan Açılır Menü */
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 320px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+            z-index: 1002;
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow-y: auto;
+            border-left: 1px solid #eee;
+        }
+
+        .sidebar-menu.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            background: white;
+            height: 70px;
+        }
+
+        .sidebar-header .logo {
+            display: none;
+        }
+
+        .sidebar-close {
+            background: transparent;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .sidebar-close:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-links {
+            padding: 20px 0;
+        }
+
+        .sidebar-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 15px 25px;
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .sidebar-links a:hover {
+            background: rgba(26, 86, 219, 0.05);
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+            padding-left: 30px;
+        }
+
+        .sidebar-links a.active {
+            background: rgba(26, 86, 219, 0.1);
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+        }
+
+        .sidebar-links a i {
+            width: 24px;
+            text-align: center;
+            color: var(--gray-dark);
+        }
+
+        .sidebar-links a:hover i,
+        .sidebar-links a.active i {
+            color: var(--primary);
+        }
+
+        /* Submenu Styles */
+        .submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: rgba(26, 86, 219, 0.03);
+        }
+
+        .submenu.active {
+            max-height: 200px;
+        }
+
+        .submenu a {
+            padding: 12px 25px 12px 50px !important;
+            font-size: 1rem !important;
+            border-left: 4px solid transparent !important;
+        }
+
+        .submenu a:hover {
+            background: rgba(26, 86, 219, 0.08) !important;
+        }
+
+        .submenu-icon {
+            font-size: 0.8rem !important;
+            transition: transform 0.3s ease;
+        }
+
+        .has-submenu.active .submenu-icon {
+            transform: rotate(180deg);
+        }
+
+        .sidebar-cta {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: white;
+        }
+
+        .sidebar-btn {
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .sidebar-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .sidebar-btn.phone {
+            background: var(--primary);
+            color: white;
+            border: none;
+        }
+
+        .sidebar-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Overlay */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* HERO SECTION */
+        .nakliye-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1556740738-6ebd3d6b2b8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 140px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .nakliye-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nakliye-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .nakliye-hero h1 span {
+            color: var(--secondary);
+            display: inline-block;
+        }
+
+        .nakliye-hero p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        .hero-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 18px 36px;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            min-width: 220px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn i {
+            font-size: 1.2rem;
+        }
+
+        /* ANA İÇERİK */
+        .main-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .content-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* SOL SÜTUN - İÇERİK */
+        .article-content {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--dark);
+            line-height: 1.3;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--primary);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-light);
+        }
+
+        .content-section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 25px 0 15px;
+            color: var(--dark);
+        }
+
+        .content-section p {
+            margin-bottom: 20px;
+            color: var(--gray-dark);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .content-section ul, .content-section ol {
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(26, 86, 219, 0.1), rgba(30, 66, 159, 0.05));
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        /* SAĞ SÜTUN - SIDEBAR */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--gray-light);
+        }
+
+        .widget-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gray-light);
+        }
+
+        .quick-contact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .quick-contact .widget-title {
+            color: white;
+            border-bottom-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-sidebar-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: var(--transition);
+            margin-bottom: 15px;
+        }
+
+        .contact-sidebar-btn.whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+        }
+
+        .contact-sidebar-btn.phone {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .contact-sidebar-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .keyword-list {
+            list-style: none;
+        }
+
+        .keyword-list li {
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .keyword-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .keyword-list a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .keyword-list a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .keyword-list i {
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .faq-sidebar .faq-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .faq-sidebar .faq-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .faq-sidebar .faq-question {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-sidebar .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+        }
+
+        .faq-sidebar .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-sidebar .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .faq-sidebar .faq-item.active .faq-answer {
+            max-height: 300px;
+            margin-top: 10px;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            border-radius: var(--radius);
+            margin: 80px auto;
+            max-width: 1200px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* OTOMATİK SOHBET BALONU */
+        .chat-bubble {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .chat-bubble.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .chat-content {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            border: 1px solid var(--gray-light);
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .chat-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .chat-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        .chat-text p {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .chat-call-btn {
+            display: block;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+
+        .chat-call-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(26, 86, 219, 0.3);
+        }
+
+        .chat-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.05);
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+
+        /* FLOATING CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .floating-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            text-decoration: none;
+            font-size: 1.8rem;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-phone {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(26, 86, 219, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(26, 86, 219, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(26, 86, 219, 0);
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nakliye-hero {
+                padding: 100px 20px 80px;
+            }
+            
+            .nakliye-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .nakliye-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
+                min-width: 100%;
+                padding: 16px 24px;
+            }
+            
+            .hero-cta-buttons, .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .article-content {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .floating-cta {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .floating-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
+            
+            .sidebar-menu {
+                width: 280px;
+            }
+            
+            .chat-content {
+                width: 280px;
+                right: 10px;
+                bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nakliye-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HAMBURGER MENÜ -->
+    <div class="top-bar">
+        <div class="logo">
+            <a href="/"><i class="fas fa-truck"></i> Birlik Nakliye</a>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <!-- Sidebar Menü -->
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-header">
+            <button class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-links">
+            <a href="#">
+                <i class="fas fa-home"></i> Ana Sayfa
+            </a>
+            <a href="#sehirler-arasi">
+                <i class="fas fa-route"></i> Şehirler Arası Nakliyat
+            </a>
+            <a href="#nakliyat-fiyatlari">
+                <i class="fas fa-money-bill-wave"></i> Nakliyat Fiyatları
+            </a>
+            <a href="#en-yakin-nakliyeci">
+                <i class="fas fa-map-marker-alt"></i> En Yakın Nakliyeci
+            </a>
+            <a href="#evden-eve-nakliyat">
+                <i class="fas fa-truck-loading"></i> Evden Eve Nakliyat
+            </a>
+            <a href="#nakliye-firmalari">
+                <i class="fas fa-building"></i> Nakliye Firmaları
+            </a>
+            <a href="#iletisim">
+                <i class="fas fa-phone-alt"></i> Nakliyatçı Numarası
+            </a>
+        </div>
+
+        <div class="sidebar-cta">
+            <a href="https://wa.me/905369985940" target="_blank" class="sidebar-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="tel:05369985940" class="sidebar-btn phone">
+                <i class="fas fa-phone"></i> 0536 998 59 40
+            </a>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- HERO SECTION -->
+    <section class="nakliye-hero">
+        <div class="nakliye-hero-content">
+            <h1>Birlik Nakliye: <span>Güvenli ve Ekonomik</span> Nakliye Çözümleri</h1>
+            <p>Türkiye'nin her yerine şehirler arası nakliyat, evden eve taşımacılık ve profesyonel nakliye hizmetleri. En uygun fiyatlarla güvenilir taşımacılık.</p>
+            <div class="hero-cta-buttons">
+                <a href="tel:05369985940" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hemen Arayın: 0536 998 59 40</a>
+                <a href="#nakliyat-fiyatlari" class="btn btn-secondary"><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Al</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANA İÇERİK -->
+    <main class="main-content">
+        <div class="content-container">
+            <!-- SOL SÜTUN - ANA İÇERİK -->
+            <article class="article-content">
+                <h1 class="section-title"><i class="fas fa-truck-moving"></i> Birlik Nakliye - Türkiye Geneli Nakliyat Hizmetleri</h1>
+                <p class="section-subtitle">2005'ten beri Türkiye'nin 81 iline güvenli, hızlı ve ekonomik nakliye hizmeti sunuyoruz. <strong>Şehirler arası nakliyat</strong>, <strong>evden eve nakliyat</strong>, ofis taşıma ve kurumsal nakliye çözümlerimizle yanınızdayız.</p>
+                
+                <!-- ŞEHİRLER ARASI NAKLİYAT -->
+                <section class="content-section" id="sehirler-arasi">
+                    <h2>Şehirler Arası Nakliyat</h2>
+                    <p><strong>Şehirler arası nakliyat</strong> hizmetimizle eşyalarınızı güvenle taşıyoruz. İstanbul'dan Ankara'ya, İzmir'den Antalya'ya, Türkiye'nin her noktasına profesyonel taşımacılık hizmeti sunuyoruz.</p>
+                    
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-info-circle"></i> Şehirler Arası Nakliyat Avantajlarımız:</h4>
+                        <ul>
+                            <li><strong>Sigortalı taşımacılık</strong> - Eşyalarınız %100 sigortalı</li>
+                            <li><strong>Profesyonel paketleme</strong> - Kırılacak eşyalar özel ambalajlarda</li>
+                            <li><strong>Zamanında teslimat</strong> - Anlaştığımız gün ve saatte teslimat</li>
+                            <li><strong>Ekonomik fiyatlar</strong> - En uygun nakliyat fiyatları</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Hizmet Verdiğimiz Başlıca Güzergahlar</h3>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-map-signs"></i>
+                            </div>
+                            <h4>İstanbul ↔ Ankara</h4>
+                            <p>İstanbul ve Ankara arası günlük seferler. Eşyalarınız 1 günde teslim.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h4>İzmir ↔ Antalya</h4>
+                            <p>Ege ve Akdeniz bölgeleri arası profesyonel taşımacılık.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h4>Bursa ↔ İzmir</h4>
+                            <p>Sanayi ve ticari eşya taşımacılığında uzman ekibimiz.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- NAKLİYAT FİYATLARI -->
+                <section class="content-section" id="nakliyat-fiyatlari">
+                    <h2>Nakliyat Fiyatları 2025</h2>
+                    <p><strong>Nakliyat fiyatları</strong> taşınacak eşya miktarına, mesafeye ve özel gereksinimlere göre değişiklik gösterir. Aşağıda ortalama fiyat aralıklarımızı bulabilirsiniz:</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>1+1 Ev Eşyası</h4>
+                            <p><strong>İstanbul ↔ Ankara:</strong> 4.500 TL - 6.000 TL</p>
+                            <p><strong>İzmir ↔ Antalya:</strong> 3.800 TL - 5.200 TL</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4>2+1 Ev Eşyası</h4>
+                            <p><strong>İstanbul ↔ Ankara:</strong> 6.500 TL - 8.500 TL</p>
+                            <p><strong>İzmir ↔ Antalya:</strong> 5.500 TL - 7.200 TL</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-warehouse"></i>
+                            </div>
+                            <h4>3+1 Ev Eşyası</h4>
+                            <p><strong>İstanbul ↔ Ankara:</strong> 8.000 TL - 11.000 TL</p>
+                            <p><strong>İzmir ↔ Antalya:</strong> 7.000 TL - 9.500 TL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Alın!</h4>
+                        <p>Tam ve net fiyat almak için bizi arayın: <strong>0536 998 59 40</strong>. Taşınacak eşya listesi, çıkış ve varış adreslerinizi belirterek anında fiyat teklifi alabilirsiniz. Nakliyat fiyatlarımızda herhangi bir gizli masraf yoktur.</p>
+                    </div>
+                </section>
+                
+                <!-- EN YAKIN NAKLİYECİ -->
+                <section class="content-section" id="en-yakin-nakliyeci">
+                    <h2>En Yakın Nakliyeci</h2>
+                    <p><strong>En yakın nakliyeci</strong> arayışında mısınız? Birlik Nakliye olarak Türkiye'nin 81 ilinde hizmet veriyoruz. Bulunduğunuz bölgeye en yakın şubemizden veya mobil ekibimizden hemen hizmet alabilirsiniz.</p>
+                    
+                    <h3>Hızlı Müdahale Ekiplerimiz</h3>
+                    <ul>
+                        <li><strong>İstanbul:</strong> Avrupa ve Anadolu yakasında 7/24 hizmet</li>
+                        <li><strong>Ankara:</strong> Tüm ilçelere hızlı ulaşım</li>
+                        <li><strong>İzmir:</strong> Merkez ve çevre ilçelerde acil nakliye</li>
+                        <li><strong>Bursa:</strong> Sanayi bölgelerinde özel ekipler</li>
+                        <li><strong>Antalya:</strong> Turistik bölgelere özel çözümler</li>
+                    </ul>
+                    
+                    <p>Acil nakliye ihtiyacınız varsa hemen <strong>0536 998 59 40</strong> numaralı telefondan bize ulaşın. En yakın ekibimiz 1-2 saat içinde adresinizde olacaktır.</p>
+                </section>
+                
+                <!-- EVDEN EVE NAKLİYAT -->
+                <section class="content-section" id="evden-eve-nakliyat">
+                    <h2>Evden Eve Nakliyat</h2>
+                    <p><strong>Evden eve nakliyat</strong> işlemlerinizde Birlik Nakliye güvencesiyle hizmet veriyoruz. Eşyalarınızın paketlenmesinden, yüklenmesine, taşınmasından yeni evinizde yerleştirilmesine kadar tüm süreci profesyonelce yönetiyoruz.</p>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h4>Profesyonel Paketleme</h4>
+                            <p>Kırılacak eşyalarınız özel ambalaj malzemeleriyle paketlenir.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck-loading"></i>
+                            </div>
+                            <h4>Güvenli Yükleme</h4>
+                            <p>Eşyalarınız hasar görmeyecek şekilde özenle yüklenir.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-people-carry"></i>
+                            </div>
+                            <h4>Yerleştirme Hizmeti</h4>
+                            <p>Yeni evinizde eşyalarınız istediğiniz yerlere yerleştirilir.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- NAKLİYE FİRMALARI -->
+                <section class="content-section" id="nakliye-firmalari">
+                    <h2>Nakliye Firmaları İçin Referansımız</h2>
+                    <p>Birlik Nakliye olarak, <strong>nakliye firmaları</strong> arasında güvenilirliğimiz ve kalitemizle öne çıkıyoruz. 20 yılı aşkın tecrübemizle binlerce müşteriye hizmet verdik.</p>
+                    
+                    <h3>Neden Bizi Tercih Etmelisiniz?</h3>
+                    <ul>
+                        <li><strong>20+ Yıllık Tecrübe:</strong> 2005'ten beri nakliye sektöründeyiz</li>
+                        <li><strong>%100 Müşteri Memnuniyeti:</strong> Memnuniyet oranımız %98'in üzerinde</li>
+                        <li><strong>Sigortalı Taşımacılık:</strong> Tüm eşyalarınız sigorta kapsamında</li>
+                        <li><strong>Modern Araç Filosu:</strong> Son model nakliye araçlarımız</li>
+                        <li><strong>Profesyonel Ekip:</strong> Eğitimli ve deneyimli personel</li>
+                        <li><strong>7/24 Hizmet:</strong> Haftanın her günü, günün her saati hizmet</li>
+                    </ul>
+                </section>
+                
+                <!-- İLETİŞİM -->
+                <section class="content-section" id="iletisim">
+                    <h2>Nakliyatçı Numarası ve İletişim</h2>
+                    <p><strong>Nakliyatçı numarası</strong> arayışınız Birlik Nakliye ile son bulsun. Türkiye geneli nakliye hizmetlerimiz için hemen bize ulaşın.</p>
+                    
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-phone-volume"></i> Hemen Arayın!</h4>
+                        <p><strong>Ana İletişim Numaramız:</strong> 0536 998 59 40</p>
+                        <p><strong>WhatsApp Hattı:</strong> 0536 998 59 40</p>
+                        <p><strong>Çalışma Saatleri:</strong> Haftanın 7 günü, 08:00 - 24:00</p>
+                        <p><strong>Acili Nakliye:</strong> 7/24 acil nakliye hattı</p>
+                    </div>
+                    
+                    <h3>Hizmet Bölgelerimiz</h3>
+                    <p>Türkiye'nin tüm illerine hizmet veriyoruz. Özellikle İstanbul, Ankara, İzmir, Bursa, Antalya, Adana, Konya, Mersin, Gaziantep, Kocaeli gibi büyük şehirlerde günlük seferlerimiz bulunmaktadır.</p>
+                </section>
+            </article>
+            
+            <!-- SAĞ SÜTUN - SIDEBAR -->
+            <aside class="sidebar">
+                <!-- HIZLI İLETİŞİM -->
+                <div class="sidebar-widget quick-contact">
+                    <h3 class="widget-title"><i class="fas fa-headset"></i> Hızlı Nakliye Talebi</h3>
+                    <p style="margin-bottom: 20px; opacity: 0.9;">Ücretsiz keşif ve fiyat teklifi için hemen arayın.</p>
+                    <a href="https://wa.me/905369985940?text=Merhaba,%20nakliye%20fiyat%20teklifi%20almak%20istiyorum." class="contact-sidebar-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp'tan Yaz</a>
+                    <a href="tel:05369985940" class="contact-sidebar-btn phone"><i class="fas fa-phone-alt"></i> 0536 998 59 40</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">7/24 Acil Nakliye Hattı</p>
+                </div>
+                
+                <!-- ANAHTAR KELİMELER -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title"><i class="fas fa-search"></i> Nakliye İle İlgili Aramalar</h3>
+                    <ul class="keyword-list">
+                        <li><a href="#sehirler-arasi"><i class="fas fa-chevron-right"></i> şehirler arası nakliyat</a></li>
+                        <li><a href="#nakliyat-fiyatlari"><i class="fas fa-chevron-right"></i> nakliyat fiyatları</a></li>
+                        <li><a href="#en-yakin-nakliyeci"><i class="fas fa-chevron-right"></i> en yakın nakliyeci</a></li>
+                        <li><a href="#evden-eve-nakliyat"><i class="fas fa-chevron-right"></i> evden eve nakliyat</a></li>
+                        <li><a href="#nakliye-firmalari"><i class="fas fa-chevron-right"></i> nakliye firmaları</a></li>
+                        <li><a href="#iletisim"><i class="fas fa-chevron-right"></i> nakliyatçı numarası</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> ucuz nakliyat</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> ofis taşıma</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> parsiyel nakliye</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> eşya taşıma fiyatları</a></li>
+                    </ul>
+                </div>
+                
+                <!-- SIK SORULAN SORULAR -->
+                <div class="sidebar-widget faq-sidebar">
+                    <h3 class="widget-title"><i class="fas fa-question-circle"></i> Nakliye Sık Sorulan Sorular</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Nakliyat fiyatı nasıl belirlenir?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Fiyat; taşınacak eşya miktarı, mesafe, kat sayısı, özel eşya varlığı ve taşıma tarihine göre belirlenir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Eşyalarım sigortalı mı?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Evet, tüm eşyalarınız nakliye sigortamız kapsamındadır. Hasarlı eşya tazmin edilir.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Taşıma ne kadar sürer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Mesafeye göre değişir. Örneğin İstanbul-Ankara arası ortalama 1 gün sürer.</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <h2>Nakliye İşleminiz İçin Hemen Teklif Alın!</h2>
+        <p>Birlik Nakliye'nin tecrübeli ekibiyle eşyalarınız güvende. Ücretsiz keşif ve en uygun fiyat garantisi.</p>
+        <div class="cta-buttons">
+            <a href="tel:05369985940" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Hemen Ara: 0536 998 59 40</a>
+            <a href="#nakliyat-fiyatlari" class="btn btn-secondary"><i class="fas fa-calculator"></i> Ücretsiz Fiyat Teklifi Al</a>
+        </div>
+    </section>
+
+    <!-- OTOMATİK SOHBET BALONU -->
+    <div class="chat-bubble" id="chatBubble">
+        <div class="chat-content">
+            <button class="chat-close" id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="chat-text">
+                    <h4>Birlik Nakliye</h4>
+                    <p>Nakliye aracımız şuan müsait. Fiyat teklifi için hemen arayın!</p>
+                </div>
+            </div>
+            <a href="tel:05369985940" class="chat-call-btn">
+                <i class="fas fa-phone-alt"></i> 0536 998 59 40
+            </a>
+        </div>
+    </div>
+
+    <!-- FLOATING CTA -->
+    <div class="floating-cta">
+        <a href="https://wa.me/905369985940" class="floating-btn floating-whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:05369985940" class="floating-btn floating-phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-truck"></i> Birlik Nakliye
+            </div>
+            
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>0536 998 59 40</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@birliknakliye.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span>7/24 Acil Nakliye Hattı</span>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#sehirler-arasi">Şehirler Arası Nakliyat</a>
+                <a href="#nakliyat-fiyatlari">Nakliyat Fiyatları</a>
+                <a href="#en-yakin-nakliyeci">En Yakın Nakliyeci</a>
+                <a href="#evden-eve-nakliyat">Evden Eve Nakliyat</a>
+                <a href="#nakliye-firmalari">Nakliye Firmaları</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+            
+            <div class="copyright">
+                © 2025 Birlik Nakliye. Tüm hakları saklıdır. | Türkiye Geneli Nakliyat Hizmetleri
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Hamburger Menü JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarMenu = document.getElementById('sidebarMenu');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        
+        // Menü aç
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                this.classList.toggle('active');
+                sidebarMenu.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+        
+        // Menü kapat
+        function closeMenu() {
+            if (menuToggle) menuToggle.classList.remove('active');
+            if (sidebarMenu) sidebarMenu.classList.remove('active');
+            if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        if (sidebarClose) {
+            sidebarClose.addEventListener('click', closeMenu);
+        }
+        
+        if (sidebarOverlay) {
+            sidebarOverlay.addEventListener('click', closeMenu);
+        }
+        
+        // Menü linklerine tıklayınca menüyü kapat
+        const sidebarLinks = document.querySelectorAll('.sidebar-links a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Sadece submenu dışındaki linkler menüyü kapatsın
+                if (!this.parentElement.classList.contains('submenu')) {
+                    closeMenu();
+                }
+            });
+        });
+        
+        // ESC tuşu ile menüyü kapat
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+        
+        // OTOMATİK SOHBET BALONU - 4 saniye sonra aç
+        const chatBubble = document.getElementById('chatBubble');
+        const chatClose = document.getElementById('chatClose');
+        
+        setTimeout(() => {
+            if (chatBubble) {
+                chatBubble.classList.add('active');
+            }
+        }, 4000);
+        
+        // Sohbet balonunu kapat
+        if (chatClose) {
+            chatClose.addEventListener('click', function() {
+                if (chatBubble) {
+                    chatBubble.classList.remove('active');
+                }
+            });
+        }
+        
+        // 30 saniye sonra balonu otomatik kapat
+        setTimeout(() => {
+            if (chatBubble && chatBubble.classList.contains('active')) {
+                chatBubble.classList.remove('active');
+            }
+        }, 30000);
+    });
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            item.classList.toggle('active');
+        });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if(targetElement) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Add active class to current section in viewport
+    const sections = document.querySelectorAll('.content-section');
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Telefon numarası tıklama analizi
+    document.querySelectorAll('a[href^="tel:"]').forEach(phoneLink => {
+        phoneLink.addEventListener('click', function() {
+            console.log('Telefon arandı: ' + this.getAttribute('href'));
+            // Buraya analytics kodu eklenebilir
+        });
+    });
+    </script>
+</body>
+</html>
